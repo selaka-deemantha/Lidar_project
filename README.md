@@ -8,7 +8,7 @@
 
 </div>
 
-![Lidar Scanner](Notes/full.png)
+<img src="Notes/full.png" alt="Lidar Scanner" width="400"/>
 
 ---
 
@@ -33,7 +33,7 @@ The ATmega328P microcontroller executes a control loop that:
 2.  Reads distance data from the TF Mini-S LiDAR sensor via UART.
 3.  Transmits the processed distance data to a computer for visualization and storage.
 
-![Exploded View](Notes/full_inside.png)
+<img src="Notes/full_inside.png" alt="Exploded View" width="400"/>
 
 ## 🛠️ Hardware
 
@@ -45,7 +45,7 @@ The ATmega328P microcontroller executes a control loop that:
 - **Serial Communication**: FT232RL USB to TTL Serial Adapter
 - **Custom PCB**: See the `PCB/` directory for Eagle/KiCad files.
 
-!PCB
+<img src="pcb.png" alt="PCB Design" width="400"/>
 
 ## 🚀 Future Development
 
