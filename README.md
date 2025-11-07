@@ -8,7 +8,18 @@
 
 </div>
 
-<img src="Notes/full.png" alt="Lidar Scanner" width="400"/>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
+  <div style="text-align: center;">
+    <img src="Notes/full.png" alt="Lidar Scanner" style="max-width: 100%; height: auto;"/>
+    <p style="font-size: 0.9em; font-style: italic;">The complete 3D LiDAR scanner assembly</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="Notes/full_inside.png" alt="Exploded View" style="max-width: 100%; height: auto;"/>
+    <p style="font-size: 0.9em; font-style: italic;">Exploded view showing internal components</p>
+  </div>
+</div>
+
+
 
 ---
 
@@ -26,14 +37,29 @@ This project presents a groundbreaking 3D LiDAR scanner designed to offer a cost
 
 ## ⚙️ How It Works
 
-The scanner's core is the cylindrical cam mechanism. As the stepper motor rotates the main body horizontally, the cam follower moves along the groove of the stationary cylindrical cam. This groove is designed to guide the LiDAR sensor vertically, tilting it up and down. The combination of continuous horizontal rotation and controlled vertical tilting results in a spiral scanning path, allowing the single laser module to capture a full 3D environment.
+The scanner's core is its innovative cylindrical cam mechanism. This is achieved by having the rotating LiDAR sensor assembly engage with a stationary, threaded cylinder. As the stepper motor rotates the main body horizontally, a cam follower on the LiDAR mount travels along the groove of this stationary cylinder. This action converts the horizontal rotation into a continuous vertical tilting motion of the LiDAR sensor. The combination of constant horizontal rotation and the induced vertical tilt results in a spiral scanning path, allowing the single laser module to capture a full 3D environment.
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; align-items: center; margin-top: 20px;">
+  <div style="text-align: center;">
+    <img src="Notes/rotate1.png" alt="Internal Mechanism View 1" style="max-width: 100%; height: auto;"/>
+    <p style="font-size: 0.9em; font-style: italic;">Exploded view of the internal mechanism</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="Notes/rotate2.png" alt="Internal Mechanism View 2" style="max-width: 100%; height: auto;"/>
+    <p style="font-size: 0.9em; font-style: italic;">Assembled internal view</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="Notes/cylinder_cam.gif" alt="Mechanism GIF" style="max-width: 100%; height: auto;"/>
+    <p style="font-size: 0.9em; font-style: italic;">Cylindrical cam mechanism in action</p>
+  </div>
+</div>
 
 The ATmega328P microcontroller executes a control loop that:
 1.  Manages the stepper motor's acceleration, constant velocity, and deceleration phases for smooth rotation.
 2.  Reads distance data from the TF Mini-S LiDAR sensor via UART.
 3.  Transmits the processed distance data to a computer for visualization and storage.
 
-<img src="Notes/full_inside.png" alt="Exploded View" width="400"/>
+
 
 ## 🛠️ Hardware
 
@@ -43,13 +69,26 @@ The ATmega328P microcontroller executes a control loop that:
 - **Motor Driver**: A4988 Stepper Motor Driver
 - **Motor**: NEMA 17 Stepper Motor (or similar)
 - **Serial Communication**: FT232RL USB to TTL Serial Adapter
-- **Custom PCB**: See the `PCB/` directory for Eagle/KiCad files.
+- **Enclosure**: Designed by Solidworks.
+- **Custom PCB**: See the `PCB/` directory for Altium files.
 
-<img src="pcb.png" alt="PCB Design" width="400"/>
+<div style="text-align: center;">
+    <img src="Notes/pcb.png" alt="PCB Design" style="width: 400px; max-width: 100%; height: auto;"/>
+</div>
+
+## 📂 File Structure
+
+```
+├── Notes/              # Contains project notes, PDFs and images
+├── PCB/                # Altium design files for the custom PCB
+├── Solidworks/         # SolidWorks CAD files for the mechanical parts
+└── src/
+    └── main.c          # Main firmware for the ATmega328P
+```
 
 ## 🚀 Future Development
 
-We are planning to develop a software interface (e.g., using Python or Processing) that will enable users to:
+We are planning to develop a software interface that will enable users to:
 - Adjust scanning speed and resolution.
 - Visualize the point cloud in real-time.
 - Export the point cloud data in standard formats (e.g., .ply, .xyz).
@@ -61,4 +100,4 @@ We are planning to develop a software interface (e.g., using Python or Processin
 
 ## 📄 License
 
-This project is open-source. We encourage you to use, modify, and share it. Consider adding a license file (e.g., MIT, Apache 2.0) to define the terms of use.
+This project is open-source. We encourage you to use, modify, and share it. Consider adding a license file to define the terms of use.
