@@ -8,7 +8,7 @@
 
 </div>
 
-![Lidar Scanner](full.png)
+![Lidar Scanner](Notes/full.png)
 
 ---
 
@@ -33,7 +33,7 @@ The ATmega328P microcontroller executes a control loop that:
 2.  Reads distance data from the TF Mini-S LiDAR sensor via UART.
 3.  Transmits the processed distance data to a computer for visualization and storage.
 
-![Exploded View](full_inside.png)
+![Exploded View](Notes/full_inside.png)
 
 ## 🛠️ Hardware
 
