@@ -1,5 +1,4 @@
 
-# 3D Lidar Scanner
 <div align="center">
 
 # 3D LiDAR Scanner
@@ -8,15 +7,19 @@
 
 </div>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
-  <div style="text-align: center;">
-    <img src="Notes/full.png" alt="Lidar Scanner" style="max-width: 100%; height: auto;"/>
-    <p style="font-size: 0.9em; font-style: italic;">The complete 3D LiDAR scanner assembly</p>
-  </div>
-  <div style="text-align: center;">
-    <img src="Notes/full_inside.png" alt="Exploded View" style="max-width: 100%; height: auto;"/>
-    <p style="font-size: 0.9em; font-style: italic;">Exploded view showing internal components</p>
-  </div>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" style="padding: 10px;">
+        <img src="Notes/full.png" alt="Lidar Scanner" width="300" style="max-width: 100%; height: auto;"/><br>
+        <em style="font-size: 0.9em;">The complete 3D LiDAR scanner assembly</em>
+      </td>
+      <td align="center" style="padding: 10px;">
+        <img src="Notes/full_inside.png" alt="Exploded View" width="300" style="max-width: 100%; height: auto;"/><br>
+        <em style="font-size: 0.9em;">Exploded view showing internal components</em>
+      </td>
+    </tr>
+  </table>
 </div>
 
 
@@ -39,19 +42,23 @@ This project presents a groundbreaking 3D LiDAR scanner designed to offer a cost
 
 The scanner's core is its innovative cylindrical cam mechanism. This is achieved by having the rotating LiDAR sensor assembly engage with a stationary, threaded cylinder. As the stepper motor rotates the main body horizontally, a cam follower on the LiDAR mount travels along the groove of this stationary cylinder. This action converts the horizontal rotation into a continuous vertical tilting motion of the LiDAR sensor. The combination of constant horizontal rotation and the induced vertical tilt results in a spiral scanning path, allowing the single laser module to capture a full 3D environment.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; align-items: center; margin-top: 20px;">
-  <div style="text-align: center;">
-    <img src="Notes/rotate1.png" alt="Internal Mechanism View 1" style="max-width: 100%; height: auto;"/>
-    <p style="font-size: 0.9em; font-style: italic;">Exploded view of the internal mechanism</p>
-  </div>
-  <div style="text-align: center;">
-    <img src="Notes/rotate2.png" alt="Internal Mechanism View 2" style="max-width: 100%; height: auto;"/>
-    <p style="font-size: 0.9em; font-style: italic;">Assembled internal view</p>
-  </div>
-  <div style="text-align: center;">
-    <img src="Notes/cylinder_cam.gif" alt="Mechanism GIF" style="max-width: 100%; height: auto;"/>
-    <p style="font-size: 0.9em; font-style: italic;">Cylindrical cam mechanism in action</p>
-  </div>
+<div align="center">
+  <table style="margin-top: 20px;">
+    <tr>
+      <td align="center" style="padding: 10px;">
+        <img src="Notes/rotate1.png" alt="Internal Mechanism View 1" width="250" style="max-width: 100%; height: auto;"/><br>
+        <em style="font-size: 0.9em;">Exploded view of the internal mechanism</em>
+      </td>
+      <td align="center" style="padding: 10px;">
+        <img src="Notes/rotate2.png" alt="Internal Mechanism View 2" width="250" style="max-width: 100%; height: auto;"/><br>
+        <em style="font-size: 0.9em;">Assembled internal view</em>
+      </td>
+      <td align="center" style="padding: 10px;">
+        <img src="Notes/cylinder_cam.gif" alt="Mechanism GIF" width="250" style="max-width: 100%; height: auto;"/><br>
+        <em style="font-size: 0.9em;">Cylindrical cam mechanism in action</em>
+      </td>
+    </tr>
+  </table>
 </div>
 
 The ATmega328P microcontroller executes a control loop that:
@@ -72,8 +79,9 @@ The ATmega328P microcontroller executes a control loop that:
 - **Enclosure**: Designed by Solidworks.
 - **Custom PCB**: See the `PCB/` directory for Altium files.
 
-<div style="text-align: center;">
-    <img src="Notes/pcb.png" alt="PCB Design" style="width: 400px; max-width: 100%; height: auto;"/>
+<div align="center" style="margin-top: 20px;">
+    <img src="Notes/pcb.png" alt="Custom PCB Design" width="400" style="max-width: 100%; height: auto;"/><br>
+    <em style="font-size: 0.9em;">Custom-designed PCB for the LiDAR scanner</em>
 </div>
 
 ## 📂 File Structure
